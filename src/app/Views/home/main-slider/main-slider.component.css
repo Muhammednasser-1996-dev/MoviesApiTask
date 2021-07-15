@@ -1,0 +1,14 @@
+.mySwiper2{
+    text-align: center;
+    width: 50%;
+}
+.mySwiper2 img{
+    width: 100% !important;
+    margin: auto;
+}
+.mySwiper{
+    width: 100%;
+}
+.mySwiper img{
+    height: 300px;
+}

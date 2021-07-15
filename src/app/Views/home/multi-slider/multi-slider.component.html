@@ -1,0 +1,17 @@
+<swiper
+    [slidesPerView]="3"
+    [spaceBetween]="30"
+    [slidesPerGroup]="3"
+    [loop]="false"
+    [loopFillGroupWithBlank]="false"
+    [pagination]="{
+      clickable: true
+    }"
+    [navigation]="true"
+    class="mySwiper my-3"
+  >
+    <ng-template swiperSlide *ngFor="let movie of muliSliderList | async">
+        <img [src]="imagePrefix + movie.poster_path" alt="poster movie" class="w-100 rounded">
+        <button type="button" [routerLink]="['/app-details', movie.id]" class="btn btn-outline-primary">Show Details</button>
+    </ng-template >
+  </swiper>
