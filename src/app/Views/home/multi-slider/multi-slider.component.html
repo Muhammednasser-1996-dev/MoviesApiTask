@@ -11,7 +11,18 @@
     class="mySwiper my-3"
   >
     <ng-template swiperSlide *ngFor="let movie of muliSliderList | async">
-        <img [src]="imagePrefix + movie.poster_path" alt="poster movie" class="w-100 rounded">
-        <button type="button" [routerLink]="['/app-details', movie.id]" class="btn btn-outline-primary">Show Details</button>
+        <!-- <img [src]="imagePrefix + movie.poster_path" alt="poster movie" class="w-75 rounded"> -->
+        <a [routerLink]="['/app-details', movie.id]">
+          <div class="movies">
+
+          <div class="img">
+           <div class="overlay">
+            <h4>Show Details</h4>
+           </div>
+            <img [src]="imagePrefix + movie.poster_path" alt="movie images" class="w-75">
+          </div>
+          </div>
+        </a>
+        <!-- <button type="button" [routerLink]="['/app-details', movie.id]" class="btn btn-outline-primary">Show Details</button> -->
     </ng-template >
   </swiper>

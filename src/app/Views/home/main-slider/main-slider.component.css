@@ -6,6 +6,29 @@
     width: 100% !important;
     margin: auto;
 }
+.mySwiper2 ng-template{
+  position: relative;
+}
+.mySwiper2 .btn-info{
+  background-color: transparent !important ;
+  border-color: #F4B2B0 !important;
+  transition: all .5s ease;
+  position: relative;
+  color: #ffff;
+  transition: all .4s ease-in-out;
+}
+.mySwiper2 .btn-info:hover{
+  background-color: #F4B2B0 !important ;
+}
+.mySwiper2 .little-Details{
+  position: absolute;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
+  background: rgb(0,0,0);
+  background: linear-gradient(0deg, rgba(0,0,0,0.9920167896260067) 0%, rgba(0,0,0,0.14047617337950802) 100%);
+}
+
 .mySwiper{
     width: 100%;
 }

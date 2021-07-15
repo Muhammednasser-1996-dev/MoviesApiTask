@@ -1,4 +1,28 @@
-.mySwiper img{
- padding: 30px;
- border: solid #eee 2px;
+.movies .img{
+  position:  relative ;
+  cursor: pointer;
+}
+.overlay{
+  background-color: #F4B2B0;
+  opacity: 0;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 20px;
+  left: 0px;
+  z-index: 4;
+  border-radius: 5px;
+  width: 75%;
+  height: 100%;
+  transform: translatey(-100);
+  transition: all .3s ease-in-out;
+}
+.overlay h4{
+  color: #ffffff !important;
+}
+.movies:hover .overlay{
+  opacity: .8;
+  top: 0;
 }

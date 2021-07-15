@@ -1,24 +1,23 @@
-<div class="movie-details">
+<div class="movie-details my-5">
+  <div class="container">
+  <div *ngIf="errVisibility == true" class="row">
 
-    <div *ngIf="errVisibility == true" class="row">
-    
-        <div class="col-md-6">
-            <img [src]="imagePrefix + moviesDetails.poster_path" alt="" class="w-100">
+      <div class="col-md-6">
+          <img [src]="imagePrefix + moviesDetails.poster_path" alt="" class="w-75">
+      </div>
+
+      <div class="col-md-6">
+        <div class="movie-info">
+          <h3 class="header">Movie Name</h3>
+          <h6>{{moviesDetails.title}}</h6>
+          <hr>
+          <h3 class="header">Description</h3>
+          <p class="lead ">{{moviesDetails.overview}} </p>
+          <hr>
+          <h3 class="header">IMDB Rating</h3>
+          <h6 class="lead ">{{moviesDetails.vote_average}}</h6>
         </div>
-    
-        <div class="col-md-6">
-          <div class="movie-info">
-            <h5 class="header">overview</h5>
-            <p class="lead ">{{moviesDetails.overview}} </p>
-            <h5 class="header">popularity</h5>
-            <h6>{{moviesDetails.popularity}}</h6>
-            <h5 class="header">vote average</h5>
-            <h6 class="lead ">{{moviesDetails.vote_average}}</h6>
-          </div>
-        </div>
-    
-    </div>
-    
-     
-    
-    </div>
+      </div>
+  </div>
+</div>
+</div>

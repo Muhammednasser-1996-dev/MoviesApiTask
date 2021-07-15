@@ -1,5 +1,5 @@
 <div class="container">
-
+<!-- Start Main slider Componenet With Swiper JS Lib -->
 <swiper
       style="--swiper-navigation-color: #fff;--swiper-pagination-color: #fff"
       [spaceBetween]="10"
@@ -9,7 +9,16 @@
     >
       <ng-template swiperSlide *ngFor="let movie of mainSliderList | async">
         <img [src]="imagePrefix + movie.poster_path" alt="poster movie" class="w-100 rounded">
-        <button type="button" [routerLink]="['/app-details', movie.id]" class="btn btn-outline-primary">Show Details</button>
+        <div class="little-Details rounded-bottom py-3">
+          <div class="row">
+            <div class="col-md-6">
+             <h4> {{movie.title}} </h4>
+            </div>
+            <div class="col-md-6">
+              <button type="button" [routerLink]="['/app-details', movie.id]" class="btn btn-info">Show Details</button>
+            </div>
+          </div>
+        </div>
       </ng-template>
     </swiper>
     <swiper

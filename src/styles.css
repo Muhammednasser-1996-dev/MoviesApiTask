@@ -1,2 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
-@import '~swiper/swiper-bundle'
+@import '~swiper/swiper-bundle';
+
+body{
+    font-family: 'MuseoModerno', cursive;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.89), rgba(32, 32, 32, 0.8)), url(./assets/bg1.jpg);
+   background-position: center center;
+   background-size: cover;
+   background-attachment: fixed;
+   color: #f8f8f8 !important;
+   overflow-x: hidden;
+}
+body p{
+  color: #c8c8c8;
+}

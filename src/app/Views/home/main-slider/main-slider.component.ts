@@ -3,7 +3,6 @@ import { Observable } from 'rxjs';
 // import SwiperCore from 'swiper/core';
 import SwiperCore, { Navigation, Thumbs } from "swiper/core";
 import { IMovie } from '../interfaces/movies.interface';
-import {GetDataService} from "../services/get-data.service";
 
 //install swiper modules
 SwiperCore.use([Navigation, Thumbs]);
@@ -24,17 +23,7 @@ export class MainSliderComponent implements OnInit {
 
   imagePrefix:string = "https://image.tmdb.org/t/p/w500/"
 
-  constructor(_GetDataService:GetDataService) {
-
-
-
-    // _GetDataService.getTrendingMovies().subscribe(
-    //   (movieData) => {
-    //     for(let i = 0; i< 4; i++){
-    //       this.MainSliderList.push(movieData.results[i])
-    //     }
-    //   }
-    //   )
+  constructor() {
    }
 
   ngOnInit(): void {

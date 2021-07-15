@@ -17,14 +17,19 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
 
     // Sending Data From Parent Componenet To Child Componenets
+
+    // 1- sending the first slider data main slider
+      this.mainSliderList$ = this._GetDataService
+      .getTrendingMovies()
+      .pipe(map((data) => data.results.slice(0,4)))
+
+    // 2- sending the second slider data multi sliders
     this.muliSliderList$ = this._GetDataService
       .GetToRatedMovies()
       .pipe(map((data) => data.results.slice(0,9)))
 
-    this.mainSliderList$ = this._GetDataService
-      .getTrendingMovies()
-      .pipe(map((data) => data.results.slice(0,9)))   
-  
+
+
   }
 
 }
