@@ -15,12 +15,12 @@ SwiperCore.use([Navigation, Thumbs]);
 })
 export class MainSliderComponent implements OnInit {
 
+  // Recieving Data From Parent componenet
   @Input() mainSliderList: Observable<IMovie[]>;
 
   thumbsSwiper: any;
 
-  // MainSliderList:any = []
-
+  // Add Static Path For images to concat with Dynamic Path from api
   imagePrefix:string = "https://image.tmdb.org/t/p/w500/"
 
   constructor() {
@@ -29,7 +29,7 @@ export class MainSliderComponent implements OnInit {
   ngOnInit(): void {
   }
 
-
+  // functions in swiper js to fire the library
   onSwiper(swiper:any) {
     console.log(swiper);
   }

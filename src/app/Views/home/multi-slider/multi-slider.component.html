@@ -3,6 +3,7 @@
   <h1>Top</h1>
 </div>
 
+<!-- Start Multi slider Componenet With Swiper JS Lib -->
 <swiper
     [slidesPerView]="3"
     [spaceBetween]="30"
@@ -13,6 +14,7 @@
     class="mySwiper my-3"
   >
     <ng-template swiperSlide *ngFor="let movie of muliSliderList | async">
+      <!-- Adding Path with Dynamic ID To get The movie Details -->
         <a [routerLink]="['/app-details', movie.id]">
           <div class="movies">
 
@@ -20,6 +22,7 @@
            <div class="overlay">
             <h4>Show Details</h4>
            </div>
+             <!-- Here Its the concatenation the static path with dynamic path form api -->
             <img [src]="imagePrefix + movie.poster_path" alt="movie images" class="w-75">
           </div>
           </div>

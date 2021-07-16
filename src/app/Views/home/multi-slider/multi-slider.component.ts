@@ -10,8 +10,11 @@ SwiperCore.use([Pagination, Navigation]);
   styleUrls: ['./multi-slider.component.css'],
 })
 export class MultiSliderComponent implements OnInit {
+
+  // Recieving Data From Parent componenet
   @Input() muliSliderList: Observable<IMovie[]>;
 
+  // Add Static Path For images to concat with Dynamic Path from api
   imagePrefix: string = 'https://image.tmdb.org/t/p/w500/';
 
   constructor() {}
