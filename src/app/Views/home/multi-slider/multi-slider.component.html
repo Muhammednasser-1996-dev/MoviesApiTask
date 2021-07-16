@@ -1,17 +1,18 @@
+<div class="header col-md-12 d-flex align-items-center justify-content-center py-4 mt-5">
+  <h2>Rated movies</h2>
+  <h1>Top</h1>
+</div>
+
 <swiper
     [slidesPerView]="3"
     [spaceBetween]="30"
     [slidesPerGroup]="3"
     [loop]="false"
     [loopFillGroupWithBlank]="false"
-    [pagination]="{
-      clickable: true
-    }"
     [navigation]="true"
     class="mySwiper my-3"
   >
     <ng-template swiperSlide *ngFor="let movie of muliSliderList | async">
-        <!-- <img [src]="imagePrefix + movie.poster_path" alt="poster movie" class="w-75 rounded"> -->
         <a [routerLink]="['/app-details', movie.id]">
           <div class="movies">
 
@@ -23,6 +24,5 @@
           </div>
           </div>
         </a>
-        <!-- <button type="button" [routerLink]="['/app-details', movie.id]" class="btn btn-outline-primary">Show Details</button> -->
     </ng-template >
   </swiper>
